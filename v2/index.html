@@ -27,13 +27,6 @@
   <a class="apri" id="link-apri" href="https://script.google.com/macros/s/AKfycbxJI8iE--QdFZo_Auf-ylLRyXVXrAdti3SzHnBKto5U8kkuroXoUefSNJxCIb7h-MtAgQ/exec">Apri Neotek</a>
 </div>
 <script>
-  // Se l'app e' gia' installata (aperta dall'icona sulla schermata Home,
-  // navigator.standalone e' true solo su iOS in quel caso), si passa
-  // subito oltre. Se invece si sta guardando in una normale scheda Safari
-  // (es. proprio mentre si fa "Aggiungi a Home"), NON si reindirizza:
-  // altrimenti Safari legge l'icona della pagina di destinazione (quella
-  // generica di Google) invece della nostra - bug reale scoperto il
-  // 2026-09-20, prima qui c'era un redirect immediato a 0 secondi.
   if (window.navigator && window.navigator.standalone) {
     location.replace(document.getElementById("link-apri").href);
   }
